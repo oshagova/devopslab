@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+    - name: Run ls.sh and output "ls /"
+      command: cat /home/grab_this.txt
+      register: out
+
+    - debug: var=out.stdout_lines
