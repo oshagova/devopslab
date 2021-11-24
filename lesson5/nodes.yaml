@@ -4,7 +4,7 @@ items:
   kind: Node
   metadata:
     annotations:
-      flannel.alpha.coreos.com/backend-data: '{"VNI":1,"VtepMAC":"92:e9:27:e8:11:c8"}'
+      flannel.alpha.coreos.com/backend-data: '{"VNI":1,"VtepMAC":"fa:8d:4a:f1:34:af"}'
       flannel.alpha.coreos.com/backend-type: vxlan
       flannel.alpha.coreos.com/kube-subnet-manager: "true"
       flannel.alpha.coreos.com/public-ip: 192.168.100.8
@@ -22,7 +22,7 @@ items:
       node-role.kubernetes.io/master: ""
       node.kubernetes.io/exclude-from-external-load-balancers: ""
     name: master
-    resourceVersion: "732"
+    resourceVersion: "44567"
     uid: b6caa3d2-8a61-428d-9e2b-c765b338a6c8
   spec:
     podCIDR: 10.244.0.0/24
@@ -42,41 +42,41 @@ items:
       ephemeral-storage: "11071221333"
       hugepages-1Gi: "0"
       hugepages-2Mi: "0"
-      memory: 7063668Ki
+      memory: 1858376Ki
       pods: "110"
     capacity:
       cpu: "4"
       ephemeral-storage: 12013044Ki
       hugepages-1Gi: "0"
       hugepages-2Mi: "0"
-      memory: 7166068Ki
+      memory: 1960776Ki
       pods: "110"
     conditions:
-    - lastHeartbeatTime: "2021-11-23T20:32:06Z"
-      lastTransitionTime: "2021-11-23T20:32:06Z"
+    - lastHeartbeatTime: "2021-11-24T08:20:34Z"
+      lastTransitionTime: "2021-11-24T08:20:34Z"
       message: Flannel is running on this node
       reason: FlannelIsUp
       status: "False"
       type: NetworkUnavailable
-    - lastHeartbeatTime: "2021-11-23T20:32:07Z"
+    - lastHeartbeatTime: "2021-11-24T09:10:04Z"
       lastTransitionTime: "2021-11-23T20:28:30Z"
       message: kubelet has sufficient memory available
       reason: KubeletHasSufficientMemory
       status: "False"
       type: MemoryPressure
-    - lastHeartbeatTime: "2021-11-23T20:32:07Z"
+    - lastHeartbeatTime: "2021-11-24T09:10:04Z"
       lastTransitionTime: "2021-11-23T20:28:30Z"
       message: kubelet has no disk pressure
       reason: KubeletHasNoDiskPressure
       status: "False"
       type: DiskPressure
-    - lastHeartbeatTime: "2021-11-23T20:32:07Z"
+    - lastHeartbeatTime: "2021-11-24T09:10:04Z"
       lastTransitionTime: "2021-11-23T20:28:30Z"
       message: kubelet has sufficient PID available
       reason: KubeletHasSufficientPID
       status: "False"
       type: PIDPressure
-    - lastHeartbeatTime: "2021-11-23T20:32:07Z"
+    - lastHeartbeatTime: "2021-11-24T09:10:04Z"
       lastTransitionTime: "2021-11-23T20:32:07Z"
       message: kubelet is posting ready status. AppArmor enabled
       reason: KubeletReady
@@ -124,15 +124,227 @@ items:
       sizeBytes: 682696
     nodeInfo:
       architecture: amd64
-      bootID: 8f2796c8-382c-40d8-a4ae-20735a896b5f
+      bootID: 17f492d1-ca41-4841-847d-2e3cffda1f49
       containerRuntimeVersion: docker://19.3.11
-      kernelVersion: 5.4.0-26-generic
+      kernelVersion: 5.11.0-40-generic
       kubeProxyVersion: v1.22.4
       kubeletVersion: v1.22.4
       machineID: b0d79dddbf2646a0b2984fe200c1909f
       operatingSystem: linux
       osImage: Ubuntu 20.04 LTS
       systemUUID: 001efcb7-3977-4b5c-9bf0-1d4928847e63
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      flannel.alpha.coreos.com/backend-data: '{"VNI":1,"VtepMAC":"62:64:57:97:b1:8b"}'
+      flannel.alpha.coreos.com/backend-type: vxlan
+      flannel.alpha.coreos.com/kube-subnet-manager: "true"
+      flannel.alpha.coreos.com/public-ip: 192.168.100.9
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2021-11-24T09:01:34Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: node1
+      kubernetes.io/os: linux
+    name: node1
+    resourceVersion: "44829"
+    uid: 8fdc8c97-a05d-4b90-a661-d513150625b3
+  spec:
+    podCIDR: 10.244.1.0/24
+    podCIDRs:
+    - 10.244.1.0/24
+  status:
+    addresses:
+    - address: 192.168.100.9
+      type: InternalIP
+    - address: node1
+      type: Hostname
+    allocatable:
+      cpu: "4"
+      ephemeral-storage: "11071221333"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 6695028Ki
+      pods: "110"
+    capacity:
+      cpu: "4"
+      ephemeral-storage: 12013044Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 6797428Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2021-11-24T09:02:25Z"
+      lastTransitionTime: "2021-11-24T09:02:25Z"
+      message: Flannel is running on this node
+      reason: FlannelIsUp
+      status: "False"
+      type: NetworkUnavailable
+    - lastHeartbeatTime: "2021-11-24T09:12:35Z"
+      lastTransitionTime: "2021-11-24T09:01:33Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:35Z"
+      lastTransitionTime: "2021-11-24T09:01:33Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:35Z"
+      lastTransitionTime: "2021-11-24T09:01:33Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:35Z"
+      lastTransitionTime: "2021-11-24T09:02:24Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - k8s.gcr.io/kube-proxy@sha256:7cd096e334df4bdad417fe91616d34d9f0a134af9aed19db12083e39d60e76a5
+      - k8s.gcr.io/kube-proxy:v1.22.4
+      sizeBytes: 103649165
+    - names:
+      - quay.io/coreos/flannel@sha256:9a296fbb67790659adc3701e287adde3c59803b7fcefe354f1fc482840cdb3d9
+      - quay.io/coreos/flannel:v0.15.1
+      sizeBytes: 69516425
+    - names:
+      - rancher/mirrored-flannelcni-flannel-cni-plugin@sha256:bfe8f30c74bc6f31eba0cc6659e396dbdd5ab171314ed542cc238ae046660ede
+      - rancher/mirrored-flannelcni-flannel-cni-plugin:v1.0.0
+      sizeBytes: 9031177
+    - names:
+      - k8s.gcr.io/pause@sha256:1ff6c18fbef2045af6b9c16bf034cc421a29027b800e4f9b68ae9b1cb3e9ae07
+      - k8s.gcr.io/pause:3.5
+      sizeBytes: 682696
+    nodeInfo:
+      architecture: amd64
+      bootID: 5a565cea-9daf-4b6e-b114-9b3c26a19654
+      containerRuntimeVersion: docker://19.3.11
+      kernelVersion: 5.4.0-26-generic
+      kubeProxyVersion: v1.22.4
+      kubeletVersion: v1.22.4
+      machineID: b5814235a18d4fc4ba3242bdc252a49b
+      operatingSystem: linux
+      osImage: Ubuntu 20.04 LTS
+      systemUUID: 7f2efa23-45c8-4786-b650-cdcaf36169b2
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      flannel.alpha.coreos.com/backend-data: '{"VNI":1,"VtepMAC":"66:2d:2b:15:07:d4"}'
+      flannel.alpha.coreos.com/backend-type: vxlan
+      flannel.alpha.coreos.com/kube-subnet-manager: "true"
+      flannel.alpha.coreos.com/public-ip: 192.168.100.10
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2021-11-24T09:11:32Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: node2
+      kubernetes.io/os: linux
+    name: node2
+    resourceVersion: "44822"
+    uid: 0ac0e069-a34b-45b4-ae9b-800a4f76cd47
+  spec:
+    podCIDR: 10.244.2.0/24
+    podCIDRs:
+    - 10.244.2.0/24
+  status:
+    addresses:
+    - address: 192.168.100.10
+      type: InternalIP
+    - address: node2
+      type: Hostname
+    allocatable:
+      cpu: "4"
+      ephemeral-storage: "11071221333"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 6060148Ki
+      pods: "110"
+    capacity:
+      cpu: "4"
+      ephemeral-storage: 12013044Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 6162548Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2021-11-24T09:12:23Z"
+      lastTransitionTime: "2021-11-24T09:12:23Z"
+      message: Flannel is running on this node
+      reason: FlannelIsUp
+      status: "False"
+      type: NetworkUnavailable
+    - lastHeartbeatTime: "2021-11-24T09:12:32Z"
+      lastTransitionTime: "2021-11-24T09:11:32Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:32Z"
+      lastTransitionTime: "2021-11-24T09:11:32Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:32Z"
+      lastTransitionTime: "2021-11-24T09:11:32Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2021-11-24T09:12:32Z"
+      lastTransitionTime: "2021-11-24T09:12:22Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - k8s.gcr.io/kube-proxy@sha256:7cd096e334df4bdad417fe91616d34d9f0a134af9aed19db12083e39d60e76a5
+      - k8s.gcr.io/kube-proxy:v1.22.4
+      sizeBytes: 103649165
+    - names:
+      - quay.io/coreos/flannel@sha256:9a296fbb67790659adc3701e287adde3c59803b7fcefe354f1fc482840cdb3d9
+      - quay.io/coreos/flannel:v0.15.1
+      sizeBytes: 69516425
+    - names:
+      - rancher/mirrored-flannelcni-flannel-cni-plugin@sha256:bfe8f30c74bc6f31eba0cc6659e396dbdd5ab171314ed542cc238ae046660ede
+      - rancher/mirrored-flannelcni-flannel-cni-plugin:v1.0.0
+      sizeBytes: 9031177
+    - names:
+      - k8s.gcr.io/pause@sha256:1ff6c18fbef2045af6b9c16bf034cc421a29027b800e4f9b68ae9b1cb3e9ae07
+      - k8s.gcr.io/pause:3.5
+      sizeBytes: 682696
+    nodeInfo:
+      architecture: amd64
+      bootID: 0a93c486-17c5-4d75-9922-13b99fced637
+      containerRuntimeVersion: docker://19.3.11
+      kernelVersion: 5.4.0-26-generic
+      kubeProxyVersion: v1.22.4
+      kubeletVersion: v1.22.4
+      machineID: fc595f5fe9614278a635d5fff4b6bead
+      operatingSystem: linux
+      osImage: Ubuntu 20.04 LTS
+      systemUUID: 9ec0c092-309e-4d98-86ff-e7d062ef6407
 kind: List
 metadata:
   resourceVersion: ""
