@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    volumes:
+      - ./conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./conf/vhosts:/usr/local/apache2/conf/vhosts
+    ports:
+      - 80:80
+    container_name: frontend
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    container_name: backend
